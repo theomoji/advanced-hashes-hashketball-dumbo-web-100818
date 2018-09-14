@@ -115,3 +115,19 @@ def game_hash
   }
   game_hash
 end
+
+def num_points_scored(name)
+  game_hash.each do |game, data|
+    data.each do |details, score|
+
+    end
+  end
+end
+# expect(num_points_scored("Jeff Adrien")).to eq(10)
+
+def home_team_name
+  game_hash[:home][:team_name]
+end
+
+puts home_team_name
+# => "Brooklyn Nets"
