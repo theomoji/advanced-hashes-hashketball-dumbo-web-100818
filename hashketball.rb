@@ -1,7 +1,7 @@
 game_hash = {
   :home => {
     :team_name => "Brooklyn Nets",
-    :colors => [Black, White],
+    :colors => ["Black", "White"],
     :players => {
       "Alan Anderson" => {
         :number => 0,
@@ -54,7 +54,7 @@ game_hash = {
         :slam_dunks => 1,
       },
     },
-  }
+  },
   :away => {
     :team_name => "Charlotte Hornets",
     :colors => ["Turquoise", "Purple"],
@@ -112,3 +112,5 @@ game_hash = {
     },
   },
 }
+
+puts game_hash
