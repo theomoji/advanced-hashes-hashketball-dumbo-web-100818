@@ -118,6 +118,7 @@ end
 
 def num_points_scored(name)
   game_hash.each do |game, data|
+    binding.pry
     data.each do |details, score|
 
     end
@@ -125,9 +126,9 @@ def num_points_scored(name)
 end
 # expect(num_points_scored("Jeff Adrien")).to eq(10)
 
-def home_team_name
-  game_hash[:home][:team_name]
-end
-
-puts home_team_name
+# def home_team_name
+#   game_hash[:home][:team_name]
+# end
+#
+# puts home_team_name
 # => "Brooklyn Nets"
