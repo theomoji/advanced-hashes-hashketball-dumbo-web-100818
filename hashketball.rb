@@ -118,6 +118,6 @@ def game_hash
 end
 
 def num_points_scored(name)
-
+  game_hash[:away][:players][name][points]
 end
 # expect(num_points_scored("Jeff Adrien")).to eq(10)
