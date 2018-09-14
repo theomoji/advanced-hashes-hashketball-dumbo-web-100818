@@ -118,6 +118,8 @@ def game_hash
 end
 
 def num_points_scored(name)
-  game_hash[:away][:players][name][points]
+  game_hash.each do |destination, data|
+    p game_hash[destination][:players][name][:points]
+  end
 end
 # expect(num_points_scored("Jeff Adrien")).to eq(10)
