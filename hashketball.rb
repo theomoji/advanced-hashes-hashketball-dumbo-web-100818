@@ -132,3 +132,17 @@ def shoe_size(name)
     end
   end
 end
+
+def team_colors(team)
+  game_hash.each do |destination, data|
+    if data[destination].has_key?(team)
+    return destination[team][:colors]
+    end
+  end
+end
+
+# game_hash = {
+# :home => {
+#   :team_name => "Brooklyn Nets",
+#   :colors => ["Black", "White"],
+#   :players => {
