@@ -121,7 +121,14 @@ def num_points_scored(name)
   game_hash.each do |destination, data|
     if data[:players].has_key?(name)
     return data[:players][name][:points]
-  end
+    end
   end
 end
-# expect(num_points_scored("Jeff Adrien")).to eq(10)
+
+def shoe_size(name)
+  game_hash.each do |destination, data|
+    if data[:players].has_key?(name)
+    return data[:players][name][:shoe]
+    end
+  end
+end
