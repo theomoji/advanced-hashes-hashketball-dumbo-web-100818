@@ -135,8 +135,8 @@ end
 
 def team_colors(team)
   game_hash.each do |destination, data|
-    if data[destination].has_key?(team)
-    return destination[team][:colors]
+    if data.has_value?(team)
+    return data[:colors]
     end
   end
 end
