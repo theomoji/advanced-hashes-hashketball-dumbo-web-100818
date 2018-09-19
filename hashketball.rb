@@ -143,15 +143,22 @@ end
 
 def team_names
   # name_array = []
-  game_hash.map do |destination, data|
+  game_hash.map {|destination, data| data[:team_name]}
     #  name_array << data[:team_name]
-    data[:team_name]
-  end
+    #end
   # name_array
 end
+#=> ["Brooklyn Nets", "Charlotte Hornets"]
 
-# game_hash = {
-# :home => {
-#   :team_name => "Brooklyn Nets",
-#   :colors => ["Black", "White"],
-#   :players => {
+
+def player_numbers(team)
+  numbers = []
+  game_hash.each do |destination, data|
+    if data.has_value?(team)
+      data[:players].each do |player, stat|
+        numbers << stat[:number]
+      end
+    end
+  end
+  numbers
+end
