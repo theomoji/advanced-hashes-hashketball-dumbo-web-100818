@@ -173,10 +173,17 @@ end
 
 
 def big_shoe_rebounds
+  max_shoe = 0
+  rebounds = 0
   game_hash.each do |destination, data|
-    shoe_sizes << stat[:shoe]
-  end
-  return shoe_sizes.max
+    data[:players].each do |player, stat|
+      if max_shoe < stat[:shoe]
+        max_shoe = stat[:shoe]
+        rebounds = stat[:rebounds]
+      end
+    end
+   end
+   return rebounds
 end
 
 
