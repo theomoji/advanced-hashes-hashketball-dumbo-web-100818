@@ -167,6 +167,17 @@ def player_stats(name)
   game_hash.each do |destination, data|
     if data[:players].has_key?(name)
         return data[:players][name]
-      end 
+      end
   end
 end
+
+
+def big_shoe_rebounds
+  game_hash.each do |destination, data|
+    shoe_sizes << stat[:shoe]
+  end
+  return shoe_sizes.max
+end
+
+
+# it 'returns the number of rebounds of the player with the biggest shoe size' do
