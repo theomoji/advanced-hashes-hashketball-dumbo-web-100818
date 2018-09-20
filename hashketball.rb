@@ -163,15 +163,10 @@ def player_numbers(team)
   numbers
 end
 
-def player_status(name)
-  # stats = []
+def player_stats(name)
   game_hash.each do |destination, data|
-    if data.has_value?(name)
-      data[:players].each do |player, stat|
-        stat 
-        #stats << stat[:number]
-      end
-    end
+    if data[:players].has_key?(name)
+        return data[:players][name]
+      end 
   end
-  stats
 end
