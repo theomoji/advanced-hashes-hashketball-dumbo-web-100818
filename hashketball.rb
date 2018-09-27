@@ -116,7 +116,22 @@ def game_hash
   }
   game_hash
 end
-
+#Gregory Dwyer(TCF-technical coaching fellow)
+         #make a helper method array_of_players
+         #begining of the programs are structured ==> mini projects
+         #5 mods. Every 3rd week dedicated to group project (2). Except for mod 5(solo).
+         #Day begins with dicussion question. Average 1 lecture a day (1-2hr).
+         #tons of labs for weeks - to do for hw
+         #How much of REACT:
+         #mod 1 Ruby, sequal (background understanding).
+         #mod 2 Ruby on Rails; Active record (interactive with data bases-words and syntax[sequal querry])
+         #Sinatra, like a small version of rails. Must be explicit. -expand understanding of Rails
+         #mod 3 Javascript (plain)
+         #mod 4 REACT (javascript library)
+         #2 languages (Ruby + Javascript)
+         #2 frameworks (Rails + REACT)
+         #build mental stamina
+         #hire within? yes. -Need basis, fairly competitive
 def num_points_scored(name)
   game_hash.each do |destination, data|
     if data[:players].has_key?(name)
